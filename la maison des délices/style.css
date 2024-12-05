@@ -1,0 +1,357 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5dc; /* Beige */
+    color: #4b3b31; /* Brun foncé */
+    display: flex;
+    min-height: 100vh; /* Assure que le corps prend toute la hauteur */
+}
+
+.container {
+    display: flex;
+    width: 100%; /* S'assure que la barre latérale et le contenu principal occupent toute la largeur */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f5f5dc; /* Brun clair */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Remplit toute la hauteur de la fenêtre */
+    position: fixed; /* Garde la barre de navigation fixe sur l'écran */
+}
+
+.logo {
+    display: flex;
+    justify-content: center; /* Centre le logo horizontalement */
+    align-items: center; /* Centre le logo verticalement */
+    margin-bottom: 20px; /* Ajoute un espace entre le logo et la première navigation */
+}
+
+.logo img {
+    width: 80%; /* Ajuste la taille du logo */
+}
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 25px 0; /* Augmente l'espace entre les titres de navigation */
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #d4af37; /* Brun foncé */
+    font-weight: bold;
+    font-size: 1.2em; /* Augmente la taille de la police */
+}
+
+.sidebar ul li a:hover {
+    color: #cfa74d; /* Doré */
+    font-size: 1.3em; /* Agrandit légèrement la taille du texte au survol */
+}
+
+
+main {
+    margin-left: 250px; /* Décale le contenu principal pour laisser de l'espace pour la barre latérale */
+    flex: 1;
+    padding: 40px;
+}
+
+h1 {
+    color: #4b3b31; /* Brun foncé */
+}
+
+p {
+    color: #ffffff; /* Brun moyen */
+}
+h2 {
+    color: white;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Ajustez la hauteur selon vos besoins */
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assure que la vidéo couvre toute la zone */
+    z-index: -1; /* Place la vidéo en arrière-plan */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(153, 88, 42, 0.6); /* Couleur brun avec 80% d'opacité */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+
+.overlay h2 {
+    margin: 0;
+    font-size: 2.5em; /* Taille du titre */
+}
+
+.overlay p {
+    margin-top: 10px;
+    font-size: 1.2em; /* Taille du texte */
+}
+
+
+
+
+
+
+
+
+
+.about-section {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px; /* Limite la largeur pour une meilleure lisibilité */
+    background-color: rgba(153, 88, 42, 0.1); /* Fond légèrement coloré */
+    border: 1px solid #d6c4a0; /* Bordure chic */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    text-align: center; /* Centre le texte */
+}
+
+.about-section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #99582A; /* Couleur dorée-brun */
+}
+
+.about-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333; /* Texte principal en gris foncé */
+}
+
+.about-section p strong {
+    color: #99582A; /* Accentue les mots clés */
+}
+
+
+
+
+/* CONTACT */
+
+
+
+
+
+/* Vidéo de fond */
+.video-container {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(153, 88, 42, 0.7); /* Fond semi-transparent */
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Section contact */
+.contact-section {
+    margin: 40px auto;
+    max-width: 800px; /* Largeur maximale */
+    padding: 20px;
+    background-color: rgba(153, 88, 42, 0.1); /* Fond légèrement coloré */
+    border: 1px solid #d6c4a0; /* Bordure chic */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    text-align: center; /* Centre le texte */
+}
+
+.contact-info h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #99582A; /* Couleur dorée-brun */
+}
+
+.contact-info p, .contact-info ul {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333; /* Texte principal en gris foncé */
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    padding: 5px 0;
+    font-weight: 500;
+}
+
+/* Général */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar ul li .active {
+    font-weight: bold;
+    color: #99582A;
+}
+ 
+
+
+
+.contact-form-section {
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(153, 88, 42, 0.1); /* Fond légèrement coloré */
+    border: 1px solid #d6c4a0; /* Bordure chic */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    text-align: center;
+}
+
+.contact-form-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #99582A; /* Couleur dorée-brun */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacement entre les champs */
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333; /* Texte principal en gris foncé */
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #d6c4a0; /* Bordure élégante */
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9; /* Fond clair */
+    color: #333; /* Couleur du texte */
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #99582A; /* Bordure dorée-brun au focus */
+    box-shadow: 0 0 5px rgba(153, 88, 42, 0.5); /* Éclat léger */
+}
+
+textarea {
+    resize: none; /* Empêche le redimensionnement */
+}
+
+.submit-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background-color: #99582A; /* Bouton doré-brun */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #d6c4a0; /* Couleur plus claire au survol */
+    transform: translateY(-2px); /* Effet de survol */
+}
+
+.submit-button:active {
+    background-color: #7f4f2a; /* Couleur plus foncée au clic */
+    transform: translateY(1px); /* Effet de clic */
+}
+
+
+/* PHOTOS EN BAS DE INDEX */
+
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacement entre les photos */
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px; /* Largeur maximale */
+}
+
+.photo {
+    width: 200px; /* Taille réduite des photos */
+    height: 200px; /* Hauteur égale à la largeur pour un aspect carré */
+    overflow: hidden;
+    border: 4px solid #d6c4a0; /* Bordure chic */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adapte l'image au conteneur */
+    transition: transform 0.3s ease; /* Effet de zoom au survol */
+}
+
+.photo:hover {
+    transform: translateY(-5px); /* Légère remontée au survol */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ombre accentuée au survol */
+}
+
+.photo:hover img {
+    transform: scale(1.1); /* Zoom sur l'image */
+}
